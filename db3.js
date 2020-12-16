@@ -29,15 +29,21 @@ con.connect(function(err) {
   
 */
 
-
+/*
 con.connect(function(err) {
     if (err) throw err;
     con.query("SELECT * FROM gelenevrak WHERE name LIKE 'M%'", function (err, result) {
       if (err) throw err;
       console.log(result);
     });
+*/
 
-
+    con.connect(function(err) {
+      if (err) throw err;
+      con.query("SELECT pass FROM users WHERE name LIKE 'Baybars'", function (err, result) {
+        if (err) throw err;
+        console.log(result);
+      });
 
 
 });

@@ -45,7 +45,7 @@ con.connect(function(err) {
 */
 
 
-
+/*
 con.connect(function(err) {
     if (err) throw err;
     var sql = "INSERT INTO gelenevrak (name, address) VALUES ('Michelle', 'Blue Village 1')";
@@ -53,6 +53,30 @@ con.connect(function(err) {
       if (err) throw err;
       console.log("1 record inserted, ID: " + result.insertId);
     });
+
+*/
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "INSERT INTO users (name, pass) VALUES ?";
+  var values = [
+    ['Baybars', 'Marduk66'],
+    ['Suela', 'Ani0212'],
+    ['Cihan', 'Chaina652'],
+    ['Yaser', 'Morocco21'],
+    ['Ozgur', 'Russan69']
+    
+  ];
+  con.query(sql, [values], function (err, result) {
+    if (err) throw err;
+    console.log("Number of records inserted: " + result.affectedRows);
+  });
+
+
+
+
+
 
 
 
