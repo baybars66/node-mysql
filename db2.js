@@ -4,7 +4,7 @@ var con = mysql.createConnection({
   host: "88.250.131.163",
   user: "bay66",
   password: "super66",
-  database: "mydb"
+  database: "Mrts2020"
 });
 /*
 con.connect(function(err) {
@@ -45,33 +45,33 @@ con.connect(function(err) {
 */
 
 
-/*
+
 con.connect(function(err) {
     if (err) throw err;
-    var sql = "INSERT INTO gelenevrak (name, address) VALUES ('Michelle', 'Blue Village 1')";
+    var sql = "INSERT INTO users (name, pass) VALUES ('Suela', 'Anelia2012')";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted, ID: " + result.insertId);
     });
 
-*/
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-  var sql = "INSERT INTO users (name, pass) VALUES ?";
-  var values = [
-    ['Baybars', 'Marduk66'],
-    ['Suela', 'Ani0212'],
-    ['Cihan', 'Chaina652'],
-    ['Yaser', 'Morocco21'],
-    ['Ozgur', 'Russan69']
+
+// con.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+//   var sql = "INSERT INTO users (name, pass) VALUES ?";
+//   var values = [
+//     ['Baybars', 'Marduk66'],
+//     ['Suela', 'Ani0212'],
+//     ['Cihan', 'Chaina652'],
+//     ['Yaser', 'Morocco21'],
+//     ['Ozgur', 'Russan69']
     
-  ];
-  con.query(sql, [values], function (err, result) {
-    if (err) throw err;
-    console.log("Number of records inserted: " + result.affectedRows);
-  });
+//   ];
+//   con.query(sql, [values], function (err, result) {
+//     if (err) throw err;
+//     console.log("Number of records inserted: " + result.affectedRows);
+//   });
 
 
 
